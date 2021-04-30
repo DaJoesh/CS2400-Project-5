@@ -13,29 +13,39 @@ public class Graph<T> implements GraphInterface<T>
     {
         return labels[vertex];
     }
-    @Override
     public boolean isEdge(int source, int target) {
         // TODO Auto-generated method stub
-        return false;
+        return edges[source][target];
     }
-    @Override
-    public void addEdge(int source, int target) {
-        // TODO Auto-generated method stub
+    public void addEdge(int source, int target)
+    {
+        edges[source][target] = true;
+    }
+    public int[] neighbors(int vertex) 
+    {  
+        int count = 0;
+        int[] answer;
+        for(int i=0; i<labels.length; i++)
+            {
+                if(edges[vertex][i])
+                    count++;
+            }
+        answer = new int[count];
+        count = 0;
+        for(int i=0; i<labels.length; i++)
         
     }
-    @Override
-    public void neighbors(int vertex) {
-        // TODO Auto-generated method stub
+    public void removeEdge(int source, int target) 
+    {
+        edges[source][target] = false;
         
     }
-    @Override
-    public void removeEdge(int source, int target) {
-        // TODO Auto-generated method stub
-        
+    public void setLabel(int vertex, T newLabel) 
+    {
+        labels[vertex] = newLabel;
     }
-    @Override
-    public void setLabel(int vertex, E newLabel) {
-        // TODO Auto-generated method stub
-        
+    public int size()
+    {
+        return labels.length;
     }
 }
