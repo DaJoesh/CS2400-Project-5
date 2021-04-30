@@ -7,7 +7,6 @@ public class Graph<E> implements GraphInterface<E> {
     // Constructor: initialize a Graph with n vertices, no edges, and null labels
     public Graph(int n) {
         edges = new boolean[n][n]; // All values initially false
-        @SuppressWarnings ("unchecked");
         labels = (E[]) new Object[n]; // All values initially null
     }
 
