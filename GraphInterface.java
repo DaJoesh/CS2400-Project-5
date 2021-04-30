@@ -13,4 +13,6 @@ public interface GraphInterface<T>
 
     public void setLabel(int vertex, T newLabel);
 
+    public int size();
+
 }
