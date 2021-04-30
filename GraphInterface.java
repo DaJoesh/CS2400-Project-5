@@ -1,11 +1,16 @@
-public class GraphInterface {
+public interface GraphInterface<T>
+{
 
     public boolean isEdge(int source, int target);
 
     public void addEdge(int source, int target);
-    getLabel(int vertex);
-    neighbors(int vertex);
-    removeEdge(int source, int target);
-    setLabel(int vertex, E newLabel);
+
+    public void getLabel(int vertex);
+
+    public void neighbors(int vertex);
+
+    public void removeEdge(int source, int target);
+
+    public void setLabel(int vertex, T newLabel);
 
 }
