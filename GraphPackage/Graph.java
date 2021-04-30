@@ -1,3 +1,4 @@
+package GraphPackage;
 //CS 2400 - Project 5
 //By Russell Rickards and Joshua Jenkins
 public class Graph<T> implements GraphInterface<T>
@@ -55,7 +56,7 @@ public class Graph<T> implements GraphInterface<T>
     {
         labels[vertex] = newLabel;
     }
-    
+
     public int size()
     {
         return labels.length;
