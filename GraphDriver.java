@@ -2,7 +2,7 @@ public class GraphDriver
 {
     	public static void main(String args[])
 	{
-		Graph bfs = new Graph(4);
+		Graph bfs = new Graph(5);
 
 		bfs.addEdge(0, 1);
 		bfs.addEdge(0, 2);
@@ -10,10 +10,12 @@ public class GraphDriver
 		bfs.addEdge(2, 0);
 		bfs.addEdge(2, 3);
 		bfs.addEdge(3, 3);
+		bfs.addEdge(3, 4);
+		bfs.addEdge(4, 4);
 
 		System.out.println("Breadth First Traversal: ");
 
-		bfs.breadthFirstTraversal(0);
+		bfs.breadthFirstTraversal(2);
 
 		System.out.println("\n");
 

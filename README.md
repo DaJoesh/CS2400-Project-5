@@ -10,6 +10,7 @@
 # Adding an edge:
 # - "g.addEdge(int x, int v);"
 #   -adds v to x's list (creates vertex).
+#   -HAS TO BE ADDED IN ORDER IN ORDER FOR IT TO WORK. SEE OUR EXAMPLES FIRST.
 #
 # Breadth first traversal:
 # - "g.breadthFirstTraversal(int source);"
