@@ -13,7 +13,9 @@ public class GraphDriver
 
 		System.out.println("Breadth First Traversal: ");
 
-		bfs.breadthFirstTraversal(2);
+		bfs.breadthFirstTraversal(0);
+
+		System.out.println("\n");
 
 		Graph dfs = new Graph(5);
          

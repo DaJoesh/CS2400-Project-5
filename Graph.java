@@ -1,6 +1,5 @@
 //CS 2400 - Project 5 
 //By Russell Rickards and Joshua Jenkins
-import java.io.*;
 import java.util.*;
 public class Graph
 {
@@ -12,7 +11,9 @@ public class Graph
 		V = v;
 		adj = new LinkedList[v];
 		for (int i=0; i<v; ++i)
+		{
 			adj[i] = new LinkedList();
+		}
 	}
 
 	public void addEdge(int v,int w)
