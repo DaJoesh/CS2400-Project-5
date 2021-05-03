@@ -5,7 +5,7 @@
 #
 # Creating a graph:
 # - "Graph g = new Graph(int size);"
-#   -size = how big you want the graph.
+#   -size = how big you want the graph. NOTE: size will be read as starting from 0 instead of 1 (i.e. 0,1,2,3 is a size of 4).
 #
 # Adding an edge:
 # - "g.addEdge(int x, int v);"
