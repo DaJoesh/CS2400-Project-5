@@ -34,10 +34,10 @@ public class Graph
 			while (i.hasNext())
 			{
 				int n = i.next();
-				if (visited[n] = 0)
+				if (visited[n] == 0)
 				{
 					visited[n] = 1;
-					queue.add(n);
+					list.add(n);
 				}
 			}
 		}
