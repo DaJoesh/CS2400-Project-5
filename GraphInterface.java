@@ -1,18 +1,11 @@
-public interface GraphInterface<E>
+//CS2400-Project-5
+//By: Russell Rickards and Joshua Jenkins
+public interface GraphInterface
 {
-
-    public boolean isEdge(int source, int target);
-
     public void addEdge(int source, int target);
 
-    public E getLabel(int vertex);
+    public void depthFirstTraversal(int s);
 
-    public int[] neighbors(int vertex);
-
-    public void removeEdge(int source, int target);
-
-    public void setLabel(int vertex, E newLabel);
-
-    public int size();
+    public void breadthFirstTraversal(int s);
 
 }
