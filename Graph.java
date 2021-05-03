@@ -29,7 +29,7 @@ public class Graph
 		while (list.size() != 0)
 		{
 			s = list.poll();
-			System.out.print(s+" ");
+			System.out.print(s + " ");
 			Iterator<Integer> i = adj[s].listIterator();
 			while (i.hasNext())
 			{
@@ -41,5 +41,38 @@ public class Graph
 				}
 			}
 		}
+	}
+
+	public void depthFirstTraversal(int s)
+    {
+        Vector<Boolean> visited = new Vector<Boolean>(V);
+        for (int i = 0; i < V; i++)
+		{
+        	visited.add(false);
+		}
+        Stack<Integer> stack = new Stack<>();
+        stack.push(s);
+        while(stack.empty() == false)
+        {
+        	s = stack.peek();
+            stack.pop();     
+            if(visited.get(s) == false)
+            {
+                System.out.print(s + " ");
+                visited.set(s, true);
+            }
+                 
+            Iterator<Integer> itr = adj[s].iterator();
+                 
+            while (itr.hasNext())
+            {
+                int v = itr.next();
+                if(!visited.get(v))
+				{
+                    stack.push(v);
+				}
+                 
+            }
+        }
 	}
 }
