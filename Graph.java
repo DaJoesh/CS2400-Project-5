@@ -1,6 +1,7 @@
-//CS 2400 - Project 5 
-//By Russell Rickards and Joshua Jenkins
+//CS2400-Project-5 
+//By: Russell Rickards and Joshua Jenkins
 import java.util.*;
+
 public class Graph implements GraphInterface
 {
 	private int vert;
@@ -12,9 +13,11 @@ public class Graph implements GraphInterface
 	public Graph(int size)
 	{
 		vert = size;
+		//ignore error
 		adjacencyList = new LinkedList[size];
 		for (int i=0; i<size; ++i)
 		{
+			//ignore error
 			adjacencyList[i] = new LinkedList();
 		}//end for
 	}//end Graoh
