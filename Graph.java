@@ -1,7 +1,7 @@
 //CS 2400 - Project 5 
 //By Russell Rickards and Joshua Jenkins
 import java.util.*;
-public class Graph
+public class Graph implements GraphInterface
 {
 	private int vert;
 	private LinkedList<Integer> adjacencyList[];
