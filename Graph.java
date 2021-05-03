@@ -3,12 +3,12 @@
 import java.util.*;
 public class Graph
 {
-	private int V;
+	private int vert;
 	private LinkedList<Integer> adj[];
 
 	public Graph(int v)
 	{
-		V = v;
+		vert = v;
 		adj = new LinkedList[v];
 		for (int i=0; i<v; ++i)
 		{
@@ -23,7 +23,7 @@ public class Graph
 
 	public void breadthFirstTraversal(int s)
 	{
-		int visited[] = new int[V];
+		int visited[] = new int[vert];
 		LinkedList<Integer> list = new LinkedList<Integer>();
 		visited[s]=1;
 		list.add(s);
@@ -31,10 +31,10 @@ public class Graph
 		{
 			s = list.poll();
 			System.out.print(s + " ");
-			Iterator<Integer> i = adj[s].listIterator();
-			while (i.hasNext())
+			Iterator<Integer> iter = adj[s].listIterator();
+			while (iter.hasNext())
 			{
-				int n = i.next();
+				int n = iter.next();
 				if (visited[n] == 0)
 				{
 					visited[n] = 1;
@@ -46,10 +46,10 @@ public class Graph
 
 	public void depthFirstTraversal(int s)
     {
-        Vector<Boolean> visited = new Vector<Boolean>(V);
-        for (int i = 0; i < V; i++)
+        Vector<Integer> visited = new Vector<Integer>(vert);
+        for (int i = 0; i < vert; i++)
 		{
-        	visited.add(false);
+        	visited.add(0);
 		}
         Stack<Integer> stack = new Stack<>();
         stack.push(s);
@@ -57,18 +57,18 @@ public class Graph
         {
         	s = stack.peek();
             stack.pop();     
-            if(visited.get(s) == false)
+            if(visited.get(s) == 0)
             {
                 System.out.print(s + " ");
-                visited.set(s, true);
+                visited.set(s, 1);
             }
                  
-            Iterator<Integer> itr = adj[s].iterator();
+            Iterator<Integer> iter = adj[s].iterator();
                  
-            while (itr.hasNext())
+            while (iter.hasNext())
             {
-                int v = itr.next();
-                if(!visited.get(v))
+                int v = iter.next();
+                if(visited.get(v) == 0)
 				{
                     stack.push(v);
 				}
@@ -76,4 +76,5 @@ public class Graph
             }
         }
 	}
+
 }
